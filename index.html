@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCraft Solutions – Soporte IT y Puesta a Punto</title>
+    <meta name="description" content="TechCraft Solutions: soporte informático, puesta a punto de PCs y portátiles, limpieza, optimización, montaje de equipos y asesoramiento tecnológico para particulares.">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon (opcional) -->
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="img/logo-horizontal.png" alt="Logo TechCraft Solutions"> <!-- Logo barra superior de la parte izquierda -->
+            </div>
+            <nav class="navbar-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#por-que">Por qué TechCraft</a>
+                <a href="#packs">Packs</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="navbar-cta" onclick="scrollToSection('contacto')">
+                Pide tu presupuesto
+            </button>
+
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <nav class="navbar-mobile" id="navbarMobile">
+        <a href="#inicio" onclick="closeMobileMenu()">Inicio</a>
+        <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+        <a href="#por-que" onclick="closeMobileMenu()">Por qué TechCraft</a>
+        <a href="#packs" onclick="closeMobileMenu()">Packs</a>
+        <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>TechCraft Solutions</h1>
+            <p class="hero-subtitle">
+                Ponemos a punto tu ordenador como si fuera nuevo: limpieza, optimización, montaje y asesoramiento tecnológico para que solo tengas que preocuparte de usarlo.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('contacto')">
+                    Quiero que revises mi equipo
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('servicios')">
+                    Ver servicios
+                </button>
+            </div>
+            <div class="hero-badges">
+                <span>🧹 Limpieza profesional</span>
+                <span>⚙️ Optimización a medida</span>
+                <span>🤝 Trato directo y cercano</span>
+                <span>🎯 Soluciones personalizadas</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-card">
+                <img src="img/logo-vertical.png" alt="TechCraft Solutions">
+                <p>Soporte y puesta a punto para PCs y portátiles de particulares.</p>
+                <ul>
+                    <li>Revisión completa del equipo</li>
+                    <li>Limpieza física y lógica</li>
+                    <li>Optimización de rendimiento</li>
+                    <li>Asesoramiento sin tecnicismos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section section-light">
+        <div class="section-title">
+            <h2>¿Qué puedo hacer por ti?</h2>
+            <p>Servicios pensados para sacar más partido a tu equipo sin que tengas que complicarte la vida.</p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Puesta en marcha de equipos -->
+            <article class="card">
+                <h3>Puesta en marcha de equipos</h3>
+                <p>
+                    Puesta en marcha de equipos nuevos o en desuso, dejándolos listos para funcionar desde el primer momento.
+                </p>
+                <ul>
+                    <li>Instalación o reinstalación del sistema operativo</li>
+                    <li>Configuración inicial y actualización de drivers</li>
+                    <li>Instalación de programas básicos y eliminación de software basura</li>
+                </ul>
+            </article>
+
+            <!-- Optimización del rendimiento y puesta a punto -->
+            <article class="card">
+                <h3>Optimización del rendimiento</h3>
+                <p>
+                    Limpieza interna completa, revisión de componentes y optimización general del sistema para recuperar velocidad y estabilidad.
+                </p>
+                <ul>
+                    <li>Limpieza de polvo y sustitución de pasta térmica</li>
+                    <li>Revisión de temperatura, ventilación y estado de hardware</li>
+                    <li>Actualización de sistema, drivers y eliminación de archivos basura</li>
+                </ul>
+            </article>
+
+            <!-- Montaje y mejora de hardware -->
+            <article class="card">
+                <h3>Montaje y mejora de hardware</h3>
+                <p>
+                    Instalación de componentes, ampliaciones y montaje de equipos desde cero con pruebas completas de estabilidad.
+                </p>
+                <ul>
+                    <li>Cambio a SSD y ampliación de RAM</li>
+                    <li>Sustitución de piezas dañadas o mejorables</li>
+                    <li>Diagnóstico de cuellos de botella y recomendación de componentes</li>
+                </ul>
+            </article>
+
+            <!-- Asesoramiento tecnológico -->
+            <article class="card">
+                <h3>Asesoramiento tecnológico</h3>
+                <p>
+                    Te guíamos para que compres solo lo que necesitas, evitando gastos innecesarios y entendiendo todo sin tecnicismos.
+                </p>
+                <ul>
+                    <li>Revisión y verificación de presupuestos</li>
+                    <li>Comprobación de compatibilidades entre componentes</li>
+                    <li>Recomendaciones claras según tu uso y presupuesto</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- POR QUÉ TECHCRAFT -->
+    <section id="por-que" class="section section-dark">
+        <div class="section-title">
+            <h2>¿Por qué TechCraft Solutions?</h2>
+            <p>No eres un número de ticket. Eres una persona con un equipo al que le quieres sacar partido.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Trato directo</h3>
+                <p>Hablas siempre con el mismo tecnico especializado. Te explicamos lo que hacemos y por qué, sin tecnicismos ni letra pequeña.</p>
+            </div>
+            <div class="feature">
+                <h3>Orientado a particulares y pequeñas empresas</h3>
+                <p>Pensamos en cómo usas tu ordenador en el día a día: trabajo, estudios, juegos, fotos… y lo adaptamos a ti.</p>
+            </div>
+            <div class="feature">
+                <h3>Visión práctica</h3>
+                <p>No te recomendamos nada que no tenga sentido. Primero lo esencial, luego lo opcional.</p>
+            </div>
+            <div class="feature">
+                <h3>Pasión por el hardware</h3>
+                <p>Nos gusta cacharrear, desmontar, mejorar y dejar los equipos mejor de lo que vinieron.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKS -->
+    <section id="packs" class="section section-light">
+        <div class="section-title">
+            <h2>Packs pensados para ti</h2>
+            <p>Ejemplos de servicios que puedes contratar. Siempre se puede ajustar a lo que tú necesitas.</p>
+        </div>
+
+        <div class="packs-grid">
+
+            <!-- PACK 1: Puesta en marcha -->
+            <article class="pack-card">
+                <h3>Pack Puesta en Marcha</h3>
+                <p class="pack-price">
+                    Desde <span>49€</span>
+                </p>
+                <p class="pack-subtitle">
+                    Ideal para equipos nuevos o que llevan tiempo cogiendo polvo.
+                </p>
+                <ul>
+                    <li>Instalación o reinstalación del sistema operativo.</li>
+                    <li>Configuración inicial y actualización de drivers esenciales.</li>
+                    <li>Instalación de programas básicos y eliminación de software basura.</li>
+                    <li>Comprobación de conectividad (WiFi, impresoras, periféricos).</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Me interesa este pack
+                </button>
+            </article>
+
+            <!-- PACK 2: Optimización completa (DESTACADO) -->
+            <article class="pack-card pack-featured">
+                <div class="pack-badge">Más elegido</div>
+                <h3>Pack Optimización Completa</h3>
+                <p class="pack-price">
+                    Desde <span>59€</span>
+                </p>
+                <p class="pack-subtitle">
+                    Para PCs que van lentos, se calientan o ya no rinden como antes.
+                </p>
+                <ul>
+                    <li>Limpieza interna completa y cambio de pasta térmica.</li>
+                    <li>Revisión de temperatura, ventilación y estado de hardware.</li>
+                    <li>Actualización del sistema operativo y controladores.</li>
+                    <li>Eliminación de archivos basura y optimización del arranque.</li>
+                    <li>Pruebas básicas de estabilidad y rendimiento.</li>
+                </ul>
+                <button class="btn-primary" onclick="scrollToSection('contacto')">
+                    Quiero este pack
+                </button>
+            </article>
+
+            <!-- PACK 3: Upgrade de hardware -->
+            <article class="pack-card">
+                <h3>Pack Upgrade Hardware</h3>
+                <p class="pack-price">
+                    Mano de obra desde <span>30€</span>
+                </p>
+                <p class="pack-subtitle">
+                    Perfecto si quieres que tu equipo “vuelva a nacer” con nuevos componentes.
+                </p>
+                <ul>
+                    <li>Cambio a SSD y ampliación o sustitución de RAM.</li>
+                    <li>Instalación de nuevas piezas (fuente, gráfica, ventiladores, etc.).</li>
+                    <li>Montaje de equipos desde cero con componentes aportados o recomendados.</li>
+                    <li>Pruebas de estabilidad y configuración del sistema tras el cambio.</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Pídeme un presupuesto
+                </button>
+            </article>
+
+            <!-- PACK 4: Asesoramiento tecnológico -->
+            <article class="pack-card">
+                <h3>Pack Asesoramiento Tecnológico</h3>
+                <p class="pack-price">
+                    Entre <span>10€</span> y <span>20€</span>
+                </p>
+                <p class="pack-subtitle">
+                    Para no tirar el dinero en equipos o componentes que no necesitas.
+                </p>
+                <ul>
+                    <li>Revisión de presupuestos de tiendas (online y físicas).</li>
+                    <li>Comprobación de compatibilidades y calidad real de los componentes.</li>
+                    <li>Recomendación de equipos según tu uso real (ofimática, gaming, trabajo, estudios...).</li>
+                    <li>Detección de ventas innecesarias o productos inflados, explicado en lenguaje “humano”.</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Quiero asesoramiento
+                </button>
+    </article>
+
+</div>
+
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section section-dark">
+        <div class="section-title">
+            <h2>Lo que dirán tus clientes</h2>
+            <p>Puedes añadir aquí opiniones reales cuando empieces a tenerlas.</p>
+        </div>
+        <div class="testimonials-grid">
+            <article class="testimonial">
+                <p>“Mi ordenador iba lentísimo y ahora arranca en segundos. Me explicó todo lo que hizo y qué podía mejorar más adelante.”</p>
+                <span>@uudanee.fndz</span>
+            </article>
+            <article class="testimonial">
+                <p>“Pensaba que tenía que cambiar de portátil, pero con la puesta a punto volvió a la vida. Me ahorré comprar uno nuevo.”</p>
+                <span>@_criistiian777</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-contact">
+        <div class="section-title">
+            <h2>Hablemos de tu equipo</h2>
+            <p>Cuéntame qué problema tienes o qué te gustaría mejorar y te respondo con una propuesta clara.</p>
+        </div>
+
+        <div class="contact-grid">
+            <form class="contact-form" action="https://formsubmit.co/tech.solutions.craft@gmail.com" method="POST">
+
+                <!-- Campos ocultos recomendados -->
+                <input type="hidden" name="_subject" value="Nueva consulta desde la web de TechCraft Solutions">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-equipo">Tipo de equipo</label>
+                    <select id="tipo-equipo" name="tipo-equipo">
+                        <option value="portatil">Portátil</option>
+                        <option value="sobremesa">Sobremesa</option>
+                        <option value="otro">Otro / No lo tengo claro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Cuéntame qué le pasa o qué necesitas</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ej: Va muy lento, tarda en encender, me gustaría cambiarlo a SSD..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar consulta</button>
+
+                <p class="form-hint">
+                    (Recibirás esta información directamente en tu correo.)
+                </p>
+            </form>
+
+            <div class="contact-info">
+                <h3>Datos de contacto</h3>
+                <ul>
+                    <li><strong>Teléfono:</strong> <a href="tel:688866690">688 866 690</a></li>
+                    <li><strong>Instagram:</strong> 
+                        <a href="https://instagram.com/tech.solutions.craft" target="_blank">@tech.solutions.craft</a>
+                    </li>
+                    <li><strong>Email:</strong> tech.solutions.craft@gmail.com</li>
+                </ul>
+                <p>Zona: País Vasco</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© <span id="year"></span> TechCraft Solutions. Todos los derechos reservados.</p>
+        <p class="footer-small">Página en desarrollo. Esta es una primera versión de presentación.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
