@@ -6,7 +6,7 @@ function scrollToSection(id) {
     }
 }
 
-// Año dinámico en el footer
+// Año dinámico en el footer + menú móvil + galerías
 document.addEventListener("DOMContentLoaded", () => {
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
@@ -23,6 +23,34 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileMenu.style.display = isVisible ? "none" : "flex";
         });
     }
+
+    // Galerías de artículos
+    const galleries = document.querySelectorAll("[data-gallery]");
+
+    galleries.forEach(gallery => {
+        const images = gallery.querySelectorAll(".gallery-images img");
+        const prevBtn = gallery.querySelector(".gallery-nav.prev");
+        const nextBtn = gallery.querySelector(".gallery-nav.next");
+        let currentIndex = 0;
+
+        if (!images.length || !prevBtn || !nextBtn) return;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+            });
+        }
+
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+    });
 });
 
 // Cerrar menú móvil al hacer clic en un enlace
@@ -33,12 +61,12 @@ function closeMobileMenu() {
     }
 }
 
-// Manejar envío del formulario (demo)
+// (La función de formulario de demo se queda comentada por si la quieres en el futuro)
 //function handleFormSubmit(event) {
 //    event.preventDefault();
-
+//
 //    alert("Esta es una demo. Aquí podrías conectar el formulario a tu correo, WhatsApp o un servicio externo.");
-
-    // Opcional: resetear el formulario
+//
+//    // Opcional: resetear el formulario
 //    event.target.reset();
 //}
