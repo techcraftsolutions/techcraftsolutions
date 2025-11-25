@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCraft Solutions – Servicios Digitales y Trámites Online</title>
+    <meta name="description" content="TechCraft Solutions: gestión de trámites digitales para particulares. Citas médicas, DNI y pasaporte, DGT, certificados, solicitudes de ayudas y más, sin complicaciones.">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon (opcional) -->
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+</head>
+
+<body class="tramites-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="img/logo-horizontal.png" alt="Logo TechCraft Solutions">
+            </div>
+
+            <nav class="navbar-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Trámites</a>
+                <a href="#como-funciona">Funcionamiento</a>
+                <a href="#precios">Precios</a>
+                <a href="#publico">¿Para quién?</a>
+                <a href="#contacto">Contacto</a>
+                <a href="index.html#inicio" class="destacado-principal">Servicios PC</a>
+            </nav>
+
+            <button class="navbar-cta" onclick="scrollToSection('contacto')">
+                Quiero ayuda con un trámite
+            </button>
+
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <nav class="navbar-mobile" id="navbarMobile">
+        <a href="#inicio" onclick="closeMobileMenu()">Inicio</a>
+        <a href="#servicios" onclick="closeMobileMenu()">Trámites</a>
+        <a href="#como-funciona" onclick="closeMobileMenu()">Cómo funciona</a>
+        <a href="#precios" onclick="closeMobileMenu()">Precios</a>
+        <a href="#publico" onclick="closeMobileMenu()">¿Para quién?</a>
+        <a href="#contacto" onclick="closeMobileMenu()">Contacto</a>
+        <a href="index.html#inicio" class="destacado-principal-movil" onclick="closeMobileMenu()">Volver a servicios PC</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+
+            <div class="division-badge">
+                División · Servicios digitales / Trámites online
+            </div>
+
+            <h1>Servicios Digitales & Trámites Online</h1>
+            <p class="hero-subtitle">
+                Delegas el papeleo, ganas tiempo. Nosotros gestionamos tus trámites digitales: citas médicas, DNI y pasaporte, DGT, certificados, ayudas y mucho más.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('contacto')">
+                    Quiero que me hagas un trámite
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('servicios')">
+                    Ver todo lo que puedo delegar
+                </button>
+            </div>
+
+            <div class="hero-badges">
+                <span>📅 Citas sin complicaciones</span>
+                <span>🧾 Certificados y documentación</span>
+                <span>🚗 Trámites DGT y administración</span>
+                <span>👵 Ideal para mayores y personas sin tiempo</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="hero-card">
+                <img src="img/logo-vertical.png" alt="TechCraft Solutions">
+                <p>Una división de TechCraft Solutions dedicada a facilitarte todos tus trámites digitales.</p>
+                <ul>
+                    <li>Gestión de citas online</li>
+                    <li>Obtención de certificados</li>
+                    <li>Trámites con administraciones</li>
+                    <li>Acompañamiento paso a paso</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS PRINCIPALES -->
+    <section id="servicios" class="section section-light">
+        <div class="section-title">
+            <h2>¿Qué trámites puedo delegar?</h2>
+            <p>Servicios pensados para personas mayores, gente sin tiempo o quien prefiere que otra persona se encargue de las gestiones digitales.</p>
+        </div>
+
+        <div class="cards-grid">
+
+            <!-- Gestión de citas online -->
+            <article class="card">
+                <h3>Gestión de citas online</h3>
+                <p>Pedimos, cambiamos o anulamos tus citas sin que tengas que pelearte con las webs oficiales.</p>
+                <ul>
+                    <li>Citas médicas</li>
+                    <li>Ayuntamientos</li>
+                    <li>Oficina de empleo / SEPE</li>
+                    <li>DGT / Tráfico</li>
+                    <li>Extranjería</li>
+                </ul>
+            </article>
+
+            <!-- Certificados -->
+            <article class="card">
+                <h3>Certificados y documentos</h3>
+                <p>Conseguimos tus documentos oficiales sin que tengas que navegar por mil plataformas.</p>
+                <ul>
+                    <li>Empadronamiento</li>
+                    <li>Vida laboral</li>
+                    <li>Informes SEPE</li>
+                    <li>Certificados de nacimiento, matrimonio o defunción</li>
+                    <li>Antecedentes penales o académicos</li>
+                </ul>
+            </article>
+
+            <!-- Trámites gubernamentales -->
+            <article class="card">
+                <h3>Trámites con administraciones</h3>
+                <p>Nos encargamos de tus gestiones en línea con organismos públicos.</p>
+                <ul>
+                    <li>Renovación de DNI/Pasaporte (cita)</li>
+                    <li>Trámites DGT</li>
+                    <li>Prestaciones y ayudas</li>
+                    <li>Cambios de domicilio</li>
+                    <li>Descarga de documentos oficiales</li>
+                </ul>
+            </article>
+
+            <!-- Asesoría -->
+            <article class="card">
+                <h3>Asesoría y acompañamiento</h3>
+                <p>Si no sabes qué necesitas o cómo hacerlo, te lo explicamos y te acompañamos.</p>
+                <ul>
+                    <li>Revisión de requisitos</li>
+                    <li>Guía paso a paso</li>
+                    <li>Videollamada o teléfono</li>
+                    <li>Resumen del trámite</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="section section-dark">
+        <div class="section-title">
+            <h2>¿Cómo funciona el servicio?</h2>
+            <p>Un proceso pensado para que no tengas que preocuparte por nada más que darnos la información necesaria.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature">
+                <h3>1. Contacto inicial</h3>
+                <p>Nos cuentas qué trámite necesitas hacer y para cuándo lo necesitas.</p>
+            </div>
+            <div class="feature">
+                <h3>2. Revisión y requisitos</h3>
+                <p>Te indicamos qué datos y documentos hacen falta y resolvemos tus dudas.</p>
+            </div>
+            <div class="feature">
+                <h3>3. Gestión del trámite</h3>
+                <p>Realizamos la gestión online en tu nombre cuando es posible, o te guiamos paso a paso.</p>
+            </div>
+            <div class="feature">
+                <h3>4. Entrega y seguimiento</h3>
+                <p>Te enviamos el justificante, cita o documento obtenido, y hacemos seguimiento si lo necesitas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="section section-light">
+        <div class="section-title">
+            <h2>Precios claros, sin sorpresas</h2>
+            <p>Tarifas orientativas para que sepas cuánto te va a costar antes de empezar.</p>
+        </div>
+
+        <div class="packs-grid">
+
+            <!-- Trámite individual -->
+            <article class="pack-card">
+                <h3>Trámite individual</h3>
+                <p class="pack-price">
+                    Desde <span>5€</span>
+                </p>
+                <p class="pack-subtitle">Ideal para gestiones puntuales.</p>
+                <ul>
+                    <li>Trámites sencillos: 5–10 €</li>
+                    <li>Intermedios: 10–15 €</li>
+                    <li>Complejos: 15–20 €</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Consultar un trámite
+                </button>
+            </article>
+
+            <!-- Bonos -->
+            <article class="pack-card pack-featured">
+                <div class="pack-badge">Muy práctico</div>
+                <h3>Bonos de gestiones</h3>
+                <p class="pack-price">Desde <span>40€</span></p>
+                <p class="pack-subtitle">Perfecto para familias o gente sin tiempo.</p>
+                <ul>
+                    <li>Bono 5 gestiones: 40 €</li>
+                    <li>Bono 10 gestiones: 75 €</li>
+                    <li>Bono 20 gestiones: 140 €</li>
+                </ul>
+                <button class="btn-primary" onclick="scrollToSection('contacto')">
+                    Me interesa un bono
+                </button>
+            </article>
+
+            <!-- Planes mensuales -->
+            <article class="pack-card">
+                <h3>Planes mensuales</h3>
+                <p class="pack-price">Desde <span>35€</span></p>
+                <p class="pack-subtitle">Para quien delega la mayoría de trámites.</p>
+                <ul>
+                    <li>Básico: 5 gestiones/mes (35 €)</li>
+                    <li>Familiar: 10 gestiones/mes (65 €)</li>
+                    <li>Empresas: 20 gestiones/mes (120 €)</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Hablar sobre un plan
+                </button>
+            </article>
+
+            <!-- Servicio exprés -->
+            <article class="pack-card">
+                <h3>Servicio exprés</h3>
+                <p class="pack-price">Recargo <span>+5€</span></p>
+                <p class="pack-subtitle">Para trámites urgentes.</p>
+                <ul>
+                    <li>Prioridad de gestión</li>
+                    <li>Confirmación rápida</li>
+                    <li>Ideal para plazos cortos</li>
+                </ul>
+                <button class="btn-outline" onclick="scrollToSection('contacto')">
+                    Necesito algo urgente
+                </button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PÚBLICO OBJETIVO -->
+    <section id="publico" class="section section-dark">
+        <div class="section-title">
+            <h2>¿Para quién es este servicio?</h2>
+            <p>Para cualquiera que quiera olvidarse de formularios y burocracia digital.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Personas mayores</h3>
+                <p>Ideal para quienes no se llevan bien con la tecnología.</p>
+            </div>
+            <div class="feature">
+                <h3>Personas sin tiempo</h3>
+                <p>Delegas las gestiones y te olvidas de perder horas online.</p>
+            </div>
+            <div class="feature">
+                <h3>Extranjeros</h3>
+                <p>Trámites de extranjería, empadronamiento, certificados...</p>
+            </div>
+            <div class="feature">
+                <h3>Quien odia la burocracia</h3>
+                <p>Hacemos el trámite por ti. Así de simple.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-contact">
+        <div class="section-title">
+            <h2>Cuéntame qué trámite necesitas</h2>
+            <p>Explícame tu situación y te responderé con una propuesta clara, sin letra pequeña.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <form class="contact-form" action="https://formsubmit.co/tech.solutions.craft@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nueva consulta – Trámites digitales TechCraft">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo-tramite">Tipo de trámite</label>
+                    <select id="tipo-tramite" name="tipo-tramite">
+                        <option value="cita-medica">Cita médica</option>
+                        <option value="dni-pasaporte">DNI / Pasaporte</option>
+                        <option value="dgt">Trámite DGT</option>
+                        <option value="certificados">Certificados</option>
+                        <option value="ayudas">Ayudas / prestaciones</option>
+                        <option value="otros">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Explícame tu caso</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ej: Quiero pedir cita para renovar el DNI de mi padre..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar consulta</button>
+
+                <p class="form-hint">Responderé lo antes posible.</p>
+            </form>
+
+            <div class="contact-info">
+                <h3>Datos de contacto</h3>
+                <ul>
+                    <li><strong>WhatsApp:</strong> 
+                        <a href="https://wa.me/34688866690?text=Hola%20TechCraft,%20quiero%20informaci%C3%B3n%20sobre%20tr%C3%A1mites%20digitales." target="_blank">
+                            Enviar mensaje
+                        </a>
+                    </li>
+                    <li><strong>Teléfono:</strong> <a href="tel:688866690">688 866 690</a></li>
+                    <li><strong>Instagram:</strong> 
+                        <a href="https://instagram.com/tech.solutions.craft" target="_blank">@tech.solutions.craft</a>
+                    </li>
+                    <li><strong>Email:</strong> tech.solutions.craft@gmail.com</li>
+                </ul>
+                <p>Zona: País Vasco</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© <span id="year"></span> TechCraft Solutions – Servicios Digitales y Trámites Online.</p>
+        <p class="footer-small">Actualizando y mejorando día a día · V 1.0.0</p>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP -->
+    <a href="https://wa.me/34688866690?text=Hola%20TechCraft,%20quiero%20informaci%C3%B3n%20sobre%20tr%C3%A1mites%20digitales."
+       class="whatsapp-floating"
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <img src="img/WhatsApp.png" alt="WhatsApp">
+    </a>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
