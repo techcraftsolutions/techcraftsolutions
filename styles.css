@@ -159,6 +159,8 @@ body {
     color: #ffffff;
     box-shadow: 0 10px 24px rgba(0, 152, 229, 0.35);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    white-space: nowrap;
+
 }
 
 .navbar-cta:hover {
